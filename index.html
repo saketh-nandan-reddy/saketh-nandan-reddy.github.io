@@ -1,1 +1,298 @@
-<h1>Saketh</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saketh Nandan Reddy Karla - Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right top, #eef2f3, #8ec5fc);
+    scroll-behavior: smooth;
+    color: #333;
+    padding-top: 20px;
+  }
+
+  .navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .profile-header {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #343a40;
+    margin-bottom: 10px;
+  }
+
+  .section {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+
+  h3 {
+    border-bottom: 2px solid #0d6efd;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+
+  .card-header {
+    font-weight: bold;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .card-body.api {
+    background: #f1f8ff;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+  .fixed-clock {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1050;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    z-index: 999;
+    border-radius: 50%;
+    padding: 10px 15px;
+  }
+
+  .btn-secondary, .btn-outline-primary {
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+
+  .text-primary {
+    font-weight: 500;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<div class="profile-header">
+  <img src="images/headshot.png" class="profile-img mb-3" alt="Profile Photo" />
+  <h1>Saketh Nandan Reddy Karla</h1>
+  <h5 class="text-muted">Software Engineer | Full Stack Developer | Cloud & AI Enthusiast</h5>
+  <p>Local Time: <span id="digitalClock"></span></p>
+  <p id="weather">Weather in Your City: <span id="weatherInfo">Loading...</span></p>
+  <p id="visitMessage" class="text-primary"></p>
+</div>
+
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Saketh Karla</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#course">Course</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<canvas id="analogClock" width="100" height="100" class="fixed-clock"></canvas>
+
+<div class="container">
+
+  <div id="about" class="section">
+    <h3>About</h3>
+    <p>I am a passionate and quick-learning software engineer with strong experience in full-stack development, cloud, and AI. I have worked at Virtusa and ECIL and am always seeking innovative challenges to grow.</p>
+  </div>
+
+  <div id="experience" class="section">
+    <h3>Experience</h3>
+    <ul>
+      <li>Software Engineer – Virtusa (Jun 2022 – Dec 2024)</li>
+      <li>Intern – Virtusa (Dec 2021 – May 2022)</li>
+      <li>Developer Intern – ECIL (6 Months)</li>
+      <li>Intern – Suven Consultants & Technology Pvt. Ltd. (1 Month)</li>
+      <li>Pre-Education Program Trainee – EPAM Systems (1 Year)</li>
+    </ul>
+  </div>
+
+  <div id="skills" class="section">
+    <h3>Skills</h3>
+    <ul>
+      <li><strong>Languages:</strong> C, C++, Java, Python, C#, JavaScript, PHP</li>
+      <li><strong>Web:</strong> HTML, CSS, Bootstrap, Angular, React</li>
+      <li><strong>Cloud/DevOps:</strong> GCP, AWS, Jenkins, Spring Boot, Microservices</li>
+      <li><strong>IoT/Mobile:</strong> Arduino, Embedded C, Android Studio</li>
+      <li><strong>AI/ML:</strong> Machine Learning, Deep Learning</li>
+    </ul>
+  </div>
+
+  <div id="projects" class="section">
+    <h3>Projects</h3>
+    <ul>
+      <li>Rapid Rescue Robot – IIT Bombay e-Yantra Finalist</li>
+      <li>Home Automation System – IoT and Raspberry Pi</li>
+      <li>Text Summarizer – NLP with Python</li>
+    </ul>
+  </div>
+
+  <div id="courses" class="section">
+    <h3>Courses & Certifications</h3>
+    <ul>
+      <li>Oracle Certified Java Associate (Java SE 8)</li>
+      <li>Google Cloud Qwiklabs – Cloud & ML</li>
+      <li>Code Innovation Series – Certificate of Excellence</li>
+      <li>Times NIE Think & Learn – City Finalist</li>
+      <li>IoT Challenge – Srujana & Spoorthi (District Level)</li>
+    </ul>
+  </div>
+
+  <div id="contact" class="section">
+    <h3>Contact</h3>
+    <p>Email: <span id="email">[Hidden]</span> <button onclick="toggleEmail()" class="btn btn-sm btn-outline-primary">Show/Hide</button></p>
+    <p>Phone: +1 (937) 414-0509</p>
+  </div>
+
+  <div id="course" class="section">
+    <h3>Course</h3>
+    <p><a href="waph.html" class="btn btn-secondary">Web Application Programming and Hacking</a></p>
+  </div>
+
+  <hr>
+  <h3>API Integrations</h3>
+  <p><strong>Disclaimer:</strong> Below content is fetched from third-party APIs.</p>
+
+  <div class="card mb-4">
+    <div class="card-header">Joke of the Moment</div>
+    <div class="card-body api text-dark" id="jokeAPI">Loading...</div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-header">NASA Astronomy Picture</div>
+    <div class="card-body api text-dark" id="nasaAPI">Loading...</div>
+  </div>
+
+  <div class="text-center mb-5">
+    <img src="https://s01.flagcounter.com/count2/abcd/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_0/labels_1/pageviews_1/flags_1/" alt="Flag Counter">
+  </div>
+</div>
+
+<a id="scrollTopBtn" href="#" class="btn btn-dark btn-lg">&#8679;</a>
+
+<script>
+  setInterval(() => {
+    document.getElementById("digitalClock").textContent = new Date().toLocaleTimeString();
+  }, 1000);
+
+  fetch('https://api.weatherapi.com/v1/current.json?key=ada4cf80303d45cb8de23428252006&q=auto:ip')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("weatherInfo").textContent = `${data.current.temp_c}°C, ${data.current.condition.text} in ${data.location.name}`;
+    });
+
+  function toggleEmail() {
+    const el = document.getElementById("email");
+    el.textContent = el.textContent.includes("@") ? "[Hidden]" : "karla.sakethnandan@gmail.com";
+  }
+
+  fetch("https://api.nasa.gov/planetary/apod?api_key=UGne6GiZrK8ibEBLnu3hcvRSAlbob4EFtCO5FUQb")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("nasaAPI").innerHTML = `<h5>${data.title}</h5><img src="${data.url}" class="img-fluid"/><p>${data.explanation}</p>`;
+    });
+
+  function loadJoke() {
+    fetch("https://v2.jokeapi.dev/joke/Any?type=single")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("jokeAPI").textContent = data.joke;
+      });
+  }
+  loadJoke();
+  setInterval(loadJoke, 60000);
+
+  const nav = document.getElementById("mainNav");
+  const navOffset = nav.offsetTop;
+  window.onscroll = function () {
+    if (window.scrollY > navOffset) {
+      nav.classList.add("sticky", "fixed-top");
+      document.getElementById("scrollTopBtn").style.display = "block";
+    } else {
+      nav.classList.remove("sticky", "fixed-top");
+      document.getElementById("scrollTopBtn").style.display = "none";
+    }
+  };
+
+  function drawAnalogClock() {
+    const canvas = document.getElementById("analogClock");
+    const ctx = canvas.getContext("2d");
+    const radius = canvas.height / 2;
+    ctx.translate(radius, radius);
+    setInterval(() => {
+      ctx.clearRect(-radius, -radius, canvas.width, canvas.height);
+      const now = new Date();
+      const [sec, min, hr] = [now.getSeconds(), now.getMinutes(), now.getHours()];
+      ctx.beginPath(); ctx.arc(0, 0, radius, 0, 2 * Math.PI); ctx.fillStyle = "#fff"; ctx.fill(); ctx.stroke();
+      [hr % 12 + min / 60, min + sec / 60, sec].forEach((t, i) => {
+        ctx.save(); ctx.rotate(t * Math.PI / (i === 0 ? 6 : 30));
+        ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -radius * (i === 0 ? 0.5 : i === 1 ? 0.7 : 0.9));
+        ctx.strokeStyle = i === 2 ? "red" : "#000"; ctx.stroke(); ctx.restore();
+      });
+    }, 1000);
+  }
+  drawAnalogClock();
+
+  const lastVisit = document.cookie.replace(/(?:(?:^|.*;\s*)lastVisit\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+  const msg = lastVisit ? `Welcome back! Your last visit was ${decodeURIComponent(lastVisit)}` : "Welcome to my homepage for the first time!";
+  document.getElementById("visitMessage").textContent = msg;
+  document.cookie = "lastVisit=" + encodeURIComponent(new Date().toLocaleString()) + "; path=/";
+</script>
+
+</body>
+</html>
