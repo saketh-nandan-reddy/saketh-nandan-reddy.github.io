@@ -12,7 +12,7 @@
 
 ---
 
-## 🧾 Overview
+## Overview
 
 This assignment focused on building and deploying a personal profile website using HTML, CSS (via Bootstrap), JavaScript, and public APIs. It demonstrates hands-on web development and client-side scripting skills.  
 
